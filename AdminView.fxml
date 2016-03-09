@@ -62,7 +62,7 @@
 					</HBox.margin>
 				</Button>
 				<Button layoutX="216.0" layoutY="10.0" mnemonicParsing="false"
-					prefHeight="37.0" prefWidth="103.0" text="add tab" fx:id="addTabButton"
+					prefHeight="37.0" prefWidth="103.0" text="add page" fx:id="addTabButton"
 					onAction="#onAddTab">
 					<HBox.margin>
 						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -81,10 +81,10 @@
 	<center>
 		<VBox prefHeight="651.0" prefWidth="515.0" BorderPane.alignment="CENTER">
 			<children>
-				<TabPane prefHeight="652.0" prefWidth="515.0" fx:id="tabpane"
+				<TabPane prefHeight="652.0" prefWidth="515.0" fx:id="tabPane"
 					tabClosingPolicy="UNAVAILABLE">
 					<tabs>
-						<Tab text="Tab1">
+						<Tab text="Page 1">
 							<content>
 								<AnchorPane minHeight="0.0" minWidth="0.0"
 									prefHeight="180.0" prefWidth="200.0" />
