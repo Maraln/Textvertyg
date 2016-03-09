@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Optional;
+import javafx.application.Platform;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +19,6 @@ public class AdminController {
 	
 	private AddNodes addNodes = new AddNodes();
 	
-	
 	@FXML
 	private Button doneButton;
 	@FXML
@@ -31,6 +31,12 @@ public class AdminController {
 	private Button statsButton;
 	@FXML
 	private TabPane tabpane;
+        
+        // event för meny-valen
+        @FXML
+        public void onClose(ActionEvent event) {
+            Platform.exit();
+        }
 	
 	// eventsen för knapparna
 	@FXML
