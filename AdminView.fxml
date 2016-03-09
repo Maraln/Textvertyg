@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<BorderPane fx:controller="application.AdminController"
+	maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+	minWidth="-Infinity" prefHeight="717.0" prefWidth="715.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<HBox prefHeight="24.0" prefWidth="715.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar HBox.hgrow="ALWAYS">
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Close" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Edit">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Delete" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+			</children>
+		</HBox>
+	</top>
+	<bottom>
+		<HBox prefHeight="82.0" prefWidth="616.0" BorderPane.alignment="CENTER_RIGHT">
+			<children>
+				<Button mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0"
+					text="Done" fx:id="doneButton" onAction="#onDone">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
+					prefHeight="37.0" prefWidth="103.0" text="add textfield" fx:id="addTextfieldButton"
+					onAction="#onAddTextfield">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button layoutX="113.0" layoutY="10.0" mnemonicParsing="false"
+					prefHeight="37.0" prefWidth="103.0" text="add checkbox" fx:id="addCheckboxButton"
+					onAction="#onAddCheckbox">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button layoutX="216.0" layoutY="10.0" mnemonicParsing="false"
+					prefHeight="37.0" prefWidth="103.0" text="add tab" fx:id="addTabButton"
+					onAction="#onAddTab">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button layoutX="319.0" layoutY="10.0" mnemonicParsing="false"
+					prefHeight="37.0" prefWidth="103.0" text="show statistics" fx:id="statsButton"
+					onAction="#onShowStatistics">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+		</HBox>
+	</bottom>
+	<center>
+		<VBox prefHeight="651.0" prefWidth="515.0" BorderPane.alignment="CENTER">
+			<children>
+				<TabPane prefHeight="652.0" prefWidth="515.0" fx:id="tabpane"
+					tabClosingPolicy="UNAVAILABLE">
+					<tabs>
+						<Tab text="Tab1">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0"
+									prefHeight="180.0" prefWidth="200.0" />
+							</content>
+						</Tab>
+					</tabs>
+				</TabPane>
+			</children>
+		</VBox>
+	</center>
+
+</BorderPane>
+
