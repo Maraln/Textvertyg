@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.media.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-
-<BorderPane fx:controller="AdminController"
-	maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-	minWidth="-Infinity" prefHeight="717.0" prefWidth="715.0"
-	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="717.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
 	<top>
 		<HBox prefHeight="24.0" prefWidth="715.0" BorderPane.alignment="CENTER">
 			<children>
@@ -20,7 +16,7 @@
 					<menus>
 						<Menu mnemonicParsing="false" text="File">
 							<items>
-								<MenuItem mnemonicParsing="false" text="Close" onAction="#onClose" />
+								<MenuItem mnemonicParsing="false" text="Close" />
 							</items>
 						</Menu>
 						<Menu mnemonicParsing="false" text="Edit">
@@ -41,36 +37,33 @@
 	<bottom>
 		<HBox prefHeight="82.0" prefWidth="616.0" BorderPane.alignment="CENTER_RIGHT">
 			<children>
-				<Button mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0"
-					text="Done" fx:id="doneButton" onAction="#onDone">
+				<Button fx:id="doneButton" mnemonicParsing="false" onAction="#onDone" prefHeight="37.0" prefWidth="103.0" text="Done">
 					<HBox.margin>
 						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 					</HBox.margin>
 				</Button>
-				<Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false"
-					prefHeight="37.0" prefWidth="103.0" text="add textfield" fx:id="addTextfieldButton"
-					onAction="#onAddTextfield">
+				<Button fx:id="addTextfieldButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddTextfield" prefHeight="37.0" prefWidth="103.0" text="add textfield">
 					<HBox.margin>
 						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 					</HBox.margin>
 				</Button>
-				<Button layoutX="113.0" layoutY="10.0" mnemonicParsing="false"
-					prefHeight="37.0" prefWidth="103.0" text="add checkbox" fx:id="addCheckboxButton"
-					onAction="#onAddCheckbox">
+				<Button fx:id="addCheckboxButton" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddCheckbox" prefHeight="37.0" prefWidth="103.0" text="add checkbox">
 					<HBox.margin>
 						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 					</HBox.margin>
 				</Button>
-				<Button layoutX="216.0" layoutY="10.0" mnemonicParsing="false"
-					prefHeight="37.0" prefWidth="103.0" text="add page" fx:id="addTabButton"
-					onAction="#onAddTab">
+				<Button fx:id="addTabButton" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddTab" prefHeight="37.0" prefWidth="103.0" text="add tab">
 					<HBox.margin>
 						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 					</HBox.margin>
 				</Button>
-				<Button layoutX="319.0" layoutY="10.0" mnemonicParsing="false"
-					prefHeight="37.0" prefWidth="103.0" text="show statistics" fx:id="statsButton"
-					onAction="#onShowStatistics">
+				<Button fx:id="statsButton" layoutX="319.0" layoutY="10.0" mnemonicParsing="false" onAction="#onShowStatistics" prefHeight="37.0" prefWidth="103.0" text="show statistics">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				
+				<Button fx:id="closeButton" layoutX="422.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClosePage" prefHeight="37.0" prefWidth="103.0" text="close">
 					<HBox.margin>
 						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 					</HBox.margin>
@@ -81,13 +74,11 @@
 	<center>
 		<VBox prefHeight="651.0" prefWidth="515.0" BorderPane.alignment="CENTER">
 			<children>
-				<TabPane prefHeight="652.0" prefWidth="515.0" fx:id="tabPane"
-					tabClosingPolicy="UNAVAILABLE">
+				<TabPane fx:id="tabpane" prefHeight="652.0" prefWidth="515.0" tabClosingPolicy="UNAVAILABLE">
 					<tabs>
-						<Tab text="Page 1">
+						<Tab text="Tab1">
 							<content>
-								<AnchorPane minHeight="0.0" minWidth="0.0"
-									prefHeight="180.0" prefWidth="200.0" />
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
 							</content>
 						</Tab>
 					</tabs>
@@ -97,4 +88,3 @@
 	</center>
 
 </BorderPane>
-
