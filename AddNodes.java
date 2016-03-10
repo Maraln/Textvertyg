@@ -7,8 +7,6 @@ import javafx.scene.layout.VBox;
 
 public class AddNodes {
 
-	private ArrayList<String> textArray;
-
 	public VBox getCheckboxes(){
 		
 		VBox checkboxContainer = new VBox();
@@ -27,8 +25,4 @@ public class AddNodes {
 		return checkboxContainer;
 	}
 
-	public void setArray(ArrayList <String> textArray) {
-		this.textArray = textArray;
-		
-	}
 }
