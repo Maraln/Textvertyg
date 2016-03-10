@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -48,23 +49,32 @@
             <Group />
             <FlowPane hgap="252.0" prefHeight="82.0" prefWidth="716.0" vgap="100.0">
                <children>
-      				<Button fx:id="doneButton" graphicTextGap="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Back" textAlignment="CENTER">
+      				<Button fx:id="doneButton" graphicTextGap="5.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="&lt; Back" textAlignment="CENTER" textFill="#1311a7">
                      <font>
                         <Font name="Times New Roman Bold" size="13.0" />
                      </font>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
       				</Button>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="68.0" text="Finish">
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Finish" textFill="#2e0fc9">
                      <font>
                         <Font name="Times New Roman Bold" size="15.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-      				<Button fx:id="statsButton" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Next" textAlignment="CENTER">
+      				<Button fx:id="statsButton" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Next  &gt;" textAlignment="CENTER" textFill="#1311a7">
                      <font>
                         <Font name="Times New Roman Bold" size="13.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
       				</Button>
                </children>
                <padding>
