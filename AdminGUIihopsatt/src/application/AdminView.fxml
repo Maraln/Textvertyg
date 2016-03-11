@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="717.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+	<top>
+		<HBox prefHeight="24.0" prefWidth="715.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar HBox.hgrow="ALWAYS">
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Close" onAction="#onClose"  />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Edit">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Delete" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+			</children>
+		</HBox>
+	</top>
+	<bottom>
+		<HBox prefHeight="82.0" prefWidth="616.0" BorderPane.alignment="CENTER_RIGHT">
+			<children>
+				<Button fx:id="doneButton" mnemonicParsing="false" onAction="#onDone" prefHeight="37.0" prefWidth="103.0" text="Done">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button fx:id="addTextfieldButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#addTextfieldRealeased" prefHeight="37.0" prefWidth="103.0" text="add textfield">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button fx:id="addCheckboxButton" layoutX="113.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddCheckbox" prefHeight="37.0" prefWidth="103.0" text="add checkbox">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button fx:id="addTabButton" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddTab" prefHeight="37.0" prefWidth="103.0" text="add tab">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+				<Button fx:id="statsButton" layoutX="319.0" layoutY="10.0" mnemonicParsing="false" onAction="#onShowStatistics" prefHeight="37.0" prefWidth="103.0" text="show statistics">
+					<HBox.margin>
+						<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+		</HBox>
+	</bottom>
+   <center>
+				<TabPane fx:id="tabpane" prefHeight="654.0" prefWidth="715.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+				</TabPane>
+   </center>
+
+</BorderPane>
