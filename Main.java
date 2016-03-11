@@ -12,9 +12,10 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			//här hämtar jag xmfl  Hämtar från root
-			Parent root = FXMLLoader.load(getClass().getResource("StastestikGui.fxml"));
-			primaryStage.setScene(new Scene(root));
+			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			Scene scene = new Scene(root,400,400);
+		
+			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
