@@ -123,9 +123,9 @@ public class timecounter extends JFrame {
 				
 				
 				
-				timer.stop();
-				timerLabel.setText("Time is up!");
-				Toolkit.getDefaultToolkit().beep();
+			// timer.stop();
+			//	timerLabel.setText("Time is up!");
+			//	Toolkit.getDefaultToolkit().beep();
 				
 			}
 			
