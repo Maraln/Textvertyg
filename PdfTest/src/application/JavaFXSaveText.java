@@ -25,8 +25,10 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
  
 
-//imoprtera bilbliteket 
-// laddda ner https://sourceforge.net/projects/itext/   för att öppna /skapa pdf importera biblotek se itextpdf-.5.5.8jar
+//importera bibloteket
+
+// laddda ner   https://sourceforge.net/projects/itext/  
+//för att öppna /skapa pdf importera biblotek se itextpdf-.5.5.8jar
 
 
 /**
@@ -36,44 +38,39 @@ public class JavaFXSaveText extends Application {
      
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("spara fråger");
+        primaryStage.setTitle("Spara fråger");
        
         TextArea textArea = new TextArea();
  
-        Button buttonSave = new Button("Save");
+        Button buttonSave = new Button("Spara");
                  
         buttonSave.setOnAction((ActionEvent event) -> {
-//            FileChooser fileChooser = new FileChooser();
-//             
-//            //Set extension filter
-//            FileChooser.ExtensionFilter extFilter = 
-//                new FileChooser.ExtensionFilter("PDF-fil",".pdf");
-//            fileChooser.getExtensionFilters().add(extFilter);
-//             
-//            //Show save file dialog
-//            File file = fileChooser.showSaveDialog(primaryStage);
-//             
-//            if(file != null){
-//                SaveFile(textArea.getText(), file);
-//            }
+          FileChooser fileChooser = new FileChooser();
+             
+         //   Set extension filter
+            FileChooser.ExtensionFilter extFilter = 
+                new FileChooser.ExtensionFilter("PDF-fil",".pdf");
+            fileChooser.getExtensionFilters().add(extFilter);
+             
+          //  Show save file dialog
+            File file = fileChooser.showSaveDialog(primaryStage);
+             
+          if(file != null){
+                SaveFile(textArea.getText(), file);
+            	saveTopdf(file.getPath(),textArea.getText());
+            }
         	
         	
-        	//Inputdialog
+        	// nu kan vi skapa en egen sök väg där vi vill pdf ska finnas i Pdf format
         	
-        	//spara resultatet
-        	
-        	saveTopdf("C:/test/anvandaren.pdf",textArea.getText());
+
         	
         });
         Group root = new Group();
-        Button inputDialog = new Button("    ");
-          
-        inputDialog.setOnAction((ActionEvent e) ->{
         
-        });
          
         VBox vBox = new VBox();
-        vBox.getChildren().addAll(textArea, buttonSave,inputDialog);
+        vBox.getChildren().addAll(textArea, buttonSave);
          
         root.getChildren().add(vBox);
          
@@ -97,7 +94,7 @@ public class JavaFXSaveText extends Application {
                 .getName()).log(Level.SEVERE, null, ex);
         }
           
-    }
+    }// metoden skapas för att spara text
     public void saveTopdf(String path,String text){
 		Document document = new Document();
 		try {
