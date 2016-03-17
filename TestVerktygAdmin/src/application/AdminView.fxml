@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="928.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="100.0" prefWidth="961.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#onDone" text="Done" />
+                  <Button mnemonicParsing="false" onAction="#onAddTextfield" text="add textfield" />
+                  <Button mnemonicParsing="false" onAction="#onAddCheckbox" text="add checkbox" />
+                  <Button mnemonicParsing="false" onAction="#onCloseTab" text="close tab" />
+                  <Button mnemonicParsing="false" onAction="#onAddTab" text="add tab" />
+                  <Button mnemonicParsing="false" onAction="#onShowStatistics" text="show statistics" />
+                  <Button mnemonicParsing="false" onAction="#onAddTextarea" text="add textarea" />
+                  <Button mnemonicParsing="false" onAction="#onSetTime" text="skapa timer" />
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="12.0" prefWidth="889.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onNewFile" text="Spara Som" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane fx:id="tabpane" prefHeight="675.0" prefWidth="208.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
