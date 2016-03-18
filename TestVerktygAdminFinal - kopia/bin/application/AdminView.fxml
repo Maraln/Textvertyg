@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="720" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+   <bottom>
+<HBox alignment="CENTER" prefHeight="120.0" prefWidth="720" BorderPane.alignment="BOTTOM_CENTER">
+            <Button mnemonicParsing="false" onAction="#onAddTextfield" text="Add Textfield" />
+            <Button mnemonicParsing="false" onAction="#onAddCheckbox" text="Add Checkbox" />
+            <Button mnemonicParsing="false" onAction="#onAddTab" text="Add Tab" />
+            <Button mnemonicParsing="false" onAction="#onShowStatistics" text="Show Statistics" />
+            <Button mnemonicParsing="false" onAction="#onAddTextarea" text="Add Textarea" />
+		</HBox>
+	</bottom>
+   <top>
+      <HBox prefHeight="12.0" prefWidth="889.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onNewFile" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
+                 </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onDeleteTab" text="Delete Tab" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onAbout" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane fx:id="tabpane" prefHeight="675.0" prefWidth="208.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
